@@ -1,0 +1,39 @@
+target_season: "2026-27"
+historical_seasons: ["2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"]
+top_n: 250
+simulation_count: 10000
+random_seed: 20260928
+cache_max_age_hours: 168
+league:
+  teams: 8
+  active_slots: 10
+  bench_slots: 3
+topk_targets:
+  top30_min: 0.80
+  top30_stretch: 0.85
+  top60_min: 0.70
+  top60_stretch: 0.75
+scoring:
+  pts: 1
+  fg3m: 1
+  fgm: 2
+  fga: -1
+  ftm: 1
+  fta: -1
+  reb: 1
+  ast: 2
+  stl: 4
+  blk: 4
+  tov: -2
+projection:
+  season_weights: [0.0094, 0.0132, 0.0187, 0.0265, 0.0374, 0.0529, 0.0749, 0.1059, 0.1498, 0.2118, 0.2995]
+  shrinkage_minutes: 500
+  shrinkage_shots: 300
+  max_context_multiplier: 1.25
+  min_context_multiplier: 0.75
+  tier_drop: 0.04
+paths:
+  raw: data/raw
+  processed: data/processed
+  inputs: data/inputs
+  output: output
